@@ -1,7 +1,7 @@
 # ml-station
 Ubuntu machine-learning-station with NVIDIA gpu.
 
-# Install
+## Steps
 1. Get and install ubuntu 20.04 - choose minimal install
 2. In terminal in home user directory:
 ```
