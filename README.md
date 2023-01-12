@@ -1,2 +1,2 @@
 # ml-station
-Machine-learning-station
+Machine-learning-station with NVIDIA gpu.
