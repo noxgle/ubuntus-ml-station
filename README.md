@@ -28,14 +28,15 @@ reboot
 mkdir ~/workspace
 ## Step 5: Run Docker container with necessary options
 ```
-docker run  -t -i -v /home/user/workspace:/workspace --restart always -p 8888:8888 --gpus all -it nvcr.io/nvidia/pytorch:22.12-py3
+docker run  -t -i -v /home/user/workspace:/workspace/lab --restart always -p 8888:8888 --gpus all -it nvcr.io/nvidia/pytorch:22.12-py3
 ```
 ## Step 6: Auto start Jupyter on reboot
 ```
 echo "nohup jupyter-notebook --ip 0.0.0.0 --no-browser --allow-root --port=8888 &" > /opt/nvidia/entrypoint.d/80-jupter.sh
 ```
-## Step 7: Get Jupyter token
+## Step 7: Get Jupyter token and copy it.
 ```
+nohup jupyter-notebook --ip 0.0.0.0 --no-browser --allow-root --port=8888 &
 cat nohup.out
 ```
 ## Step 8: Open your internet browser, paste token and your new password
